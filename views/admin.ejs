@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cadastre uma música!</h1>
+
+    <form action="/create" method="post">
+        <label for="name">Nome</label>
+        <input type="text" id="name" name="name">
+
+        <label for="author">Artista</label>
+        <input type="text" id="author" name="author">
+
+        <label for="image">Link da imagem</label>
+        <input type="text" id="image" name="image">
+
+        <label for="music">Link da música</label>
+        <input type="text" id="music" name="music">
+
+        <button type="submit">Cadastrar</button>
+    </form>
+</body>
+</html>
