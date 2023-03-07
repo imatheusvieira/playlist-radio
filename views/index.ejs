@@ -10,5 +10,16 @@
     <p>Hello World</p>
 
     <a href="/admin">ADM</a>
+
+    <ul>
+        <% playlist.forEach((music)=>{ %>
+        <li>
+            <h3><%= music.name %></h3>
+            <p><%= music.author %></p>
+            <img src="<%= music.linkImage %>" alt="">
+            <audio src="<%= music.linkMusic %>" controls></audio>
+        </li>
+        <% }) %>
+    </ul>
 </body>
 </html>

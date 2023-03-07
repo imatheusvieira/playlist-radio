@@ -14,19 +14,21 @@ app.use(express.urlencoded( {extended: true } ));
 
 connection();
 
-app.get('/', (req, res) => {
-    res.render("index");
+app.get('/', async (req, res) => {
+    const playlist = await Music.find();
+    console.log(playlist)
+    res.render("index",  { playlist });
 });
 
 app.get('/admin', (req, res) =>{
     res.render("admin")
-})
+});
 
 app.post('/create', async (req, res) =>{
     const music = req.body;
     await Music.create(music);
     res.redirect('/')
-})
+});
 
 
 app.listen(port, ()=>{
