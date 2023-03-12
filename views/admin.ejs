@@ -4,25 +4,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    <title>Radio Rihomo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Cadastre uma música!</h1>
 
-    <form action="/create" method="post">
-        <label for="name">Nome</label>
-        <input type="text" id="name" name="name">
+    <nav>
+        <ul>
+            <li>
+                <h1>Play.list</h1> 
+            </li>
+            <li>
+                <a href="/"><i class="bi bi-box-arrow-right"></i></a>  
+            </li>
+        </ul>
+    </nav>
 
-        <label for="author">Artista</label>
-        <input type="text" id="author" name="author">
+    <section id="add">
+        <h2>Cadastre uma música!</h2>
 
-        <label for="linkImage">Link da imagem</label>
-        <input type="text" id="image" name="linkImage">
+        <form action="/create" method="post">
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name">
 
-        <label for="linkMusic">Link da música</label>
-        <input type="text" id="music" name="linkMusic">
+            <label for="author">Artista</label>
+            <input type="text" id="author" name="author">
 
-        <button type="submit">Cadastrar</button>
-    </form>
+            <label for="linkImage">Link da imagem</label>
+            <input type="text" id="image" name="linkImage">
+
+            <label for="linkMusic">Link da música</label>
+            <input type="text" id="music" name="linkMusic">
+
+            <button type="submit">Cadastrar</button>
+        </form>
+    </section>
+
+    <section id="player">
+        <h1>Gerenciar Músicas</h1>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Nome</th>
+                        <th>Artista</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% playlist.forEach((music)=>{ %>
+                    <tr class="musics">
+                        <td>
+                            <img src="<%= music.linkImage %>" alt="">
+                        </td>
+                        <td><%= music.name %></td>
+                        <td><%= music.author %></td>
+                        <td id="actions">
+                            <a id="edit" href="">Editar</a>
+                            <a id="delete" href="">Apagar</a>
+                        </td>
+                    </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+
+    
 </body>
 </html>

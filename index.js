@@ -16,12 +16,12 @@ connection();
 
 app.get('/', async (req, res) => {
     const playlist = await Music.find();
-    console.log(playlist)
     res.render("index",  { playlist });
 });
 
-app.get('/admin', (req, res) =>{
-    res.render("admin")
+app.get('/admin', async (req, res) =>{
+    const playlist = await Music.find();
+    res.render("admin",  { playlist });
 });
 
 app.post('/create', async (req, res) =>{
