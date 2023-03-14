@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script defer src="/script.js"></script>
 </head>
 <body>
     <nav>
@@ -28,7 +29,7 @@
        <div>
         <img src="/img/musicoff.png" alt="" id="currentImg">
         <h2 id="currentName">Título da música</h2>
-        <p>Nome do artista ou banda</p>
+        <p id="currentArtist">Nome do artista ou banda</p>
         <p></p>
        </div>
 
@@ -67,12 +68,14 @@
         <i id="next-control" class="bi bi-skip-end-fill"></i>
 
         <span id="current-duration">00:00</span>
-        <input type="range" id="progressbar" min="0" max="0" step="1">
+        <input id="progressbar" type="range"  min="0" max="0" step="1">
         <span id="total-duration">00:00</span>
 
         <i id="vol-icon" class="bi bi-volume-up-fill"></i>
-        <input type="range" id="volume" min="0" max="100" step="1">
-
+        <input id="volume" type="range" min="0" max="100" step="1">
     </section>
+
+
+    
 </body>
 </html>
