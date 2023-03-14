@@ -256,4 +256,45 @@ div#btn-confirm a#no:hover{
     background-color: #00f;
 }
 
+/* estilos controles de som*/
 
+section#controls{
+    background-color: #0044ff;
+    padding: 1.7rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section#controls i{
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin: 0.3rem;
+}
+
+section#controls i:hover{
+    background-color: #ffffff10;
+    border-radius: 0.2rem;
+    color: #121214;
+}
+
+section#controls input#progressbar{
+    width: 50%;
+}
+
+section#controls i#vol-icon{
+    font-size: 1.5rem;
+    padding: 0.3rem;
+}
+
+section#controls input#volume{
+    width: 8%;
+}
+
+section#controls span{
+    padding: 1rem;
+}
