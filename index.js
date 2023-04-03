@@ -3,6 +3,7 @@ const express = require('express');
 const connection = require("./database/db");
 const path = require("path");
 const Music = require("./model/music")
+const User = require("./model/user")
 
 const app = express();
 
@@ -18,7 +19,20 @@ connection();
 
 app.get('/', async (req, res) => {
     const playlist = await Music.find();
-    res.render("index",  { playlist });
+    res.render("index",  { playlist});
+});
+
+app.post('/login', async (req, res) => {
+    const { user, pass } = req.body;
+    const users = await User.findOne();
+
+    if(user == users.user && pass == users.pass){
+        res.redirect("/admin");
+    } else {
+
+        res.redirect("/")
+    }
+        
 });
 
 app.get('/admin', async (req, res) =>{

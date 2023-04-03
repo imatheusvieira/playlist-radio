@@ -15,17 +15,19 @@
 <body>
     <nav>
         <ul>
-            <li>
-                <h1>Play.list</h1> 
+            <li class="logo">
+                <img src="/img/logo_rihomo.png" alt="" srcset="">
+                <h1>Rihomo</h1> 
             </li>
             <li>
-                <a href="/admin"><i class="bi bi-gear"></i></a>  
+                <a id="adm"><i class="bi bi-gear"></i></a>  
             </li>
         </ul>
     </nav>
 
     <section id="player">
         <h1>Radio Rihomo</h1>
+        
        <div>
         <img src="/img/musicoff.png" alt="" id="currentImg">
         <h2 id="currentName">Título da música</h2>
@@ -70,12 +72,26 @@
         <span id="current-duration">00:00</span>
         <input id="progressbar" type="range"  min="0" max="0" step="1">
         <span id="total-duration">00:00</span>
+        <i class="bi bi-shuffle" id="random-icon"></i>
 
         <i id="vol-icon" class="bi bi-volume-up-fill"></i>
         <input id="volume" type="range" min="0" max="100" step="1">
     </section>
 
+    <section id="modal-login">
+        <form action="/login" method="post" id="card-login">
+            
+                <a id="close-modal-login"><i class="bi bi-x-lg"></i></a>
+                <h2>Logar</h2> 
+                <label for="user">Usuário</label>
+                <input type="text" name="user" id="user" placeholder="Usuário">
+                <label for="pass">Senha</label>
+                <input type="password" name="pass" id="pass" placeholder="Senha">
+                <button id="bt-logar">Logar</button>
+        </form>
+    </section>
 
-    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"></script>
 </body>
 </html>

@@ -8,6 +8,26 @@
 body{
     background-color: #121214;
     color: #fff;
+    padding-top: 50px;
+}
+
+nav{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #0044ff;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.logo img{
+    width: 60px;
+    height: 45px;
 }
 
 nav ul{
@@ -15,6 +35,7 @@ nav ul{
     list-style: none;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 nav ul li img{
@@ -30,7 +51,12 @@ nav a{
     color: #fff;
 }
 
+
+
 section#player{
+    margin: 0 auto;
+    padding-top: 35px;
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -55,9 +81,9 @@ section#player div{
 }
 
 section#player div img#currentImg{
-    width: 20em;
-    height: 20rem;
-    padding: 2rem 0 1rem 0;
+    width: 18em;
+    height: 18em;
+    border-radius: 50%;
 }
 
 section#player div h2#currentName{
@@ -71,7 +97,7 @@ section#player div h2#currentName{
 section#player table{
     border-collapse: collapse;
     border-spacing: 0;
-    width: 50rem;
+    width: 40rem;
    
 }
 
@@ -291,10 +317,77 @@ section#controls i#vol-icon{
     padding: 0.3rem;
 }
 
+section#controls i#random-icon{
+    font-size: 1.5rem;
+    padding: 0.3rem;
+}
+
 section#controls input#volume{
     width: 8%;
 }
 
 section#controls span{
     padding: 1rem;
+}
+
+/* modal de login*/
+
+section#modal-login {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #000000a1;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+section#modal-login form#card-login{
+    width: 40%;
+    padding: 20px;
+    position: relative;
+    background-color:  #121214;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section#modal-login form#card-login a{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    text-decoration: none;
+    margin: 5px;
+}
+
+section#modal-login form#card-login h2{
+    margin: 30px;
+}
+
+section#modal-login form#card-login input{
+    width: 100%;
+    padding: 8px;
+    margin: 6px;
+    outline: none;
+    border: none;
+}
+
+section#modal-login form#card-login label{
+   
+}
+
+section#modal-login form#card-login button{
+    width: 50%;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.active{
+    color: #000;
 }
