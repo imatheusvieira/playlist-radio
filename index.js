@@ -43,7 +43,7 @@ app.get('/admin', async (req, res) =>{
 app.post('/create', async (req, res) =>{
     const music = req.body;
     await Music.create(music);
-    res.redirect('/')
+    res.redirect('/admin')
 });
 
 app.get('/by/:id/:action', async (req, res)=>{

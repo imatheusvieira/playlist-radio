@@ -239,7 +239,7 @@ controls.addEventListener('click', function (event){
         currentMusic.song.addEventListener("ended", function(){
             index++
 
-            if( index == song.length){
+            if( index == musicArray.length){
                 index = 0;
             }
 
