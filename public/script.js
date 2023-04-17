@@ -105,7 +105,6 @@ function secondsToMinutes(time){
 
 controls.addEventListener('click', function (event){
  
-
             //deixar aleatorio
          //let a = _.shuffle(audios);
          // currentMusic = a[index];
@@ -113,9 +112,6 @@ controls.addEventListener('click', function (event){
             return 0.5 - Math.random();
 */
     
-    
-  
-
     function updateDataMusic(){
 
         /*if(btShuffle.classList.contains("active")){
@@ -143,6 +139,7 @@ controls.addEventListener('click', function (event){
                 textCurrentDuration.innerText = secondsToMinutes(currentMusic.song.currentTime);
                 progressBar.valueAsNumber = currentMusic.song.currentTime;
             }
+            musicEnded();
         } else {
             currentMusic = musicArray[index];
             document.querySelector("#currentImg").src = currentMusic.img;
@@ -157,6 +154,7 @@ controls.addEventListener('click', function (event){
                 textCurrentDuration.innerText = secondsToMinutes(currentMusic.song.currentTime);
                 progressBar.valueAsNumber = currentMusic.song.currentTime;
             }
+            musicEnded();
         }
     }
    
